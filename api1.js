@@ -7,6 +7,8 @@ const port = 54900;
 const scripts = {
     tls: 'TLS-PRV.js',
     ciko: 'ciko.js',
+    h2: 'h2_blast.js',
+    bypas: 'bypass.js',
     xzy: 'xzy.js'
 };
 
