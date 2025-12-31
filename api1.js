@@ -2,7 +2,7 @@ const express = require('express');
 const { spawn } = require('child_process');
 const path = require('path');
 const app = express();
-const port = 54000;
+const port = 54900;
 
 const scripts = {
     tls: 'TLS-PRV.js',
@@ -30,7 +30,7 @@ app.get('/api', (req, res) => {
     console.log(`Running ${method}: ${scriptPath}`);
 
     // GUNAKAN spawn agar bisa kill 1 group (-pid7)
-    const child = spawn("node", [scriptPath, host, time, 15, 10, "proxy.txt"], {
+    const child = spawn("node", [scriptPath, host, time, 5, 5, "proxy.txt"], {
         detached: true, // MEMBUAT PROCESS GROUP
         stdio: "ignore"
     });
